@@ -1,0 +1,26 @@
+export default function Header(){
+    return <header>
+        <h1>Case Buttitta</h1>
+        <nav>
+            <a href="../">Home </a>
+            ||
+            <a href="../itis3135/stuff/MY start p@Ge.htm">CRAPPYWebpage</a>
+            ||
+            <a href="introduction.html">Introduction</a>
+            ||
+            <a href="contract.html">Contract</a>
+            ||
+            <a href="../curious_bison/about.html">CuriousBison</a>
+            ||
+            <a href="website_evaluations.html">Website Evaluations</a>
+            ||
+            <a href="fccfsjs_outline.html">FCC Full Stack JavaScript Outline</a>
+            ||
+            <a href="../itis3135/hobby/index.html">Hobby Page</a>
+            ||
+            <a href="../itis3135/intro_form.html">Intro Form</a>
+            ||
+            <a href="../itis3135/project_overview.html">Project Overview</a>
+        </nav>
+    </header>;
+}
