@@ -1,5 +1,5 @@
 export default function Index() {
-    document.title = "Case Buttitta || Index";
+    document.title = "Case Buttitta || Curious Bison ITIS3135 ";
        return (
         <>
             <h2>Home</h2>
