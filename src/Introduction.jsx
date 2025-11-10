@@ -2,7 +2,7 @@ import Header from "./Header"
 import Footer from "./Footer"
 
 export default function Introduction() {
-    document.title += " | Introduction";
+    document.title = " Case Buttitta | Introduction";
     return (
         <>
                 <h2>Case Buttitta | Curious Bison</h2>

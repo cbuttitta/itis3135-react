@@ -1,4 +1,5 @@
 export default function Contract() {
+    document.title = "Case Buttitta || Contract";
     return (
         <>
             <h2>ITIS 3135 Contract</h2>

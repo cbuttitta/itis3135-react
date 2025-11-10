@@ -1,5 +1,6 @@
 export default function Index() {
-    return (
+    document.title = "Case Buttitta || Index";
+       return (
         <>
             <h2>Home</h2>
             <div id="personal-content">
