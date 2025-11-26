@@ -13,7 +13,7 @@ export default function IntroductionFromJson() {
             .then((data) => setData(data))
             .catch((err) => console.error("Error loading JSON:", err));
     }, []);
-    console.log(data,data["name"]);
+    console.log(data);
     const firstName = data["name"]["first"];
     const lastName = data["name"]["last"];
     const acknowledgement = data["acknowledgement"];
