@@ -49,7 +49,7 @@ export default function IntroductionFromJson() {
             <h2>{firstName} {lastName} {divider} {mascot}</h2>
 
             <figure id="intro-figure">
-                <img src={`https://dvonb.xyz/"${imageSrc}`} alt="Case Buttitta" />
+                <img src={`https://dvonb.xyz/${imageSrc}`} alt="Case Buttitta" />
                 <figcaption id="intro-caption">{imageCaption}</figcaption>
             </figure>
 
