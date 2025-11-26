@@ -1,44 +1,45 @@
 import Header from "./Header"
 import Footer from "./Footer"
+import { useEffect, useState } from "react";
 
-export default function Introduction() {
+export default function IntroductionFromJson() {
     document.title = "Case Buttitta | Introduction From JSON";
+    const [data, setData] = useState(null);
 
-    fetch('https://dvonb.xyz/api/2025-fall/itis-3135/students/cbuttitt')
-        .then(response => response.json()) // Parse the response body as JSON
-        .then(data => {
-            const firstName = data["name"]["first"];
-            const lastName = data["name"]["last"];
-            const acknowledgement = data["acknowledgement"];
-            const acknowledgementDate = data["acknowledgementDate"];
-            const mascot = data["mascot"];
-            const divider = "||";
-            const device = data["platform"]["device"];
-            const os = data["platform"]["os"];
-            const personalBackground = data["backgrounds"]["personal"];
-            const professionalBackground = data["backgrounds"]["professional"];
-            const academicBackground = data["backgrounds"]["academic"];
-            const courses = data["courses"];
-            const personalStatement = data["personalStatement"];
-            const quoteText = data["quote"]["text"];
-            const quoteAuthor = data["quote"]["author"];
-            const funFact = data["funFact"];
-            const charlotteLink = data["links"]["charlotte"];
-            const githubLink = data["links"]["github"];
-            const githubioLink = data["links"]["githubio"];
-            const linkedinLink = data["links"]["linkedin"];
-            const freecodecampLink = data["links"]["freecodecamp"];
-            const codecademyLink = data["links"]["codecademy"];
-            const imageSrc= "/media/2025-fall/itis-3135/cbuttitt-1764028488858.jpg"
-            const imageCaption = "Case Buttitta";
-        }) 
-        .catch(error => {
-            console.error('Error fetching or parsing data:', error);
-        });
+    useEffect(() => {
+        fetch("https://dvonb.xyz/api/2025-fall/itis-3135/students/cbuttitt")
+            .then((res) => res.json())
+            .then((data) => setData(data))
+            .catch((err) => console.error("Error loading JSON:", err));
+    }, []);
+    const firstName = data["name"]["first"];
+    const lastName = data["name"]["last"];
+    const acknowledgement = data["acknowledgement"];
+    const acknowledgementDate = data["acknowledgementDate"];
+    const mascot = data["mascot"];
+    const divider = "||";
+    const device = data["platform"]["device"];
+    const os = data["platform"]["os"];
+    const personalBackground = data["backgrounds"]["personal"];
+    const professionalBackground = data["backgrounds"]["professional"];
+    const academicBackground = data["backgrounds"]["academic"];
+    const courses = data["courses"];
+    const personalStatement = data["personalStatement"];
+    const quoteText = data["quote"]["text"];
+    const quoteAuthor = data["quote"]["author"];
+    const funFact = data["funFact"];
+    const charlotteLink = data["links"]["charlotte"];
+    const githubLink = data["links"]["github"];
+    const githubioLink = data["links"]["githubio"];
+    const linkedinLink = data["links"]["linkedin"];
+    const freecodecampLink = data["links"]["freecodecamp"];
+    const codecademyLink = data["links"]["codecademy"];
+    const imageSrc = "/media/2025-fall/itis-3135/cbuttitt-1764028488858.jpg"
+    const imageCaption = "Case Buttitta";
 
     return (
         <>
-            <h2>{firstName}{lastName} | {mascot}</h2>
+            <h2>{firstName}{lastName} {divider} {mascot}</h2>
             <figure id="intro-figure">
                 <img src={imageSrc} alt="Case Buttitta" />
                 <figcaption id="intro-caption">{imageCaption}</figcaption>
