@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function IntroductionFromJson() {
     document.title = "Case Buttitta | Introduction From JSON";
+    console.log("Loading JSON...");
     const [data, setData] = useState(null);
 
     useEffect(() => {
