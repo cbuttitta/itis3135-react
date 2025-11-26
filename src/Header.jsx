@@ -8,6 +8,8 @@ export default function Header(){
             ||
             <a href="introduction.html">Introduction</a>
             ||
+            <a href="introduction.html">Introduction From JSON</a>
+            ||
             <a href="contract.html">Contract</a>
             ||
             <a href="../curious_bison/about.html">CuriousBison</a>
