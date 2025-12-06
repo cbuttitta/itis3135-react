@@ -23,6 +23,16 @@ export default function Header(){
             <a href="../itis3135/intro_form.html">Intro Form</a>
             ||
             <a href="../itis3135/project_overview.html">Project Overview</a>
+            ||
+            <a href="/">Index</a>
+            ||
+            <a href="/Introduction">Introduction</a>
+            ||
+            <a href="/IntroductionFromJson">IntroductionFromJson</a>
+            ||
+            <a href="/IntroductionFilterFromJson">IntroductionFromFilterJson</a>
+            
+
         </nav>
     </header>;
 }

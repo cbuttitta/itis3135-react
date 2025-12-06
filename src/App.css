@@ -205,3 +205,59 @@ ul {
   border-bottom: 2px solid #4a90e2;
   border-radius: 0 0 5px 5px;
 }
+
+#introsContainer {
+  display: flex;
+  /* Make the container a flex container */
+  flex-direction: column;
+  /* Arrange content in a column */
+  align-items: center;
+  /* Center items within the column horizontally */
+  text-align: center;
+  /* Center text within the items */
+  max-width: 800px;
+  /* Optional: Limit the width of the column */
+  padding: 20px;
+  /* Optional: Add some padding */
+}
+
+#search {
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 520px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 equal-width columns */
+  gap: 10px;
+  /* Spacing between grid items */
+}
+
+.checklist li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.label-text {
+  flex: 1;
+}
