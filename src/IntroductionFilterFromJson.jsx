@@ -20,7 +20,7 @@ export default function IntroductionFilterFromJson() {
         links: true
     });
     const [slideshow, setSlideshow] = useState(false);
-    const [indexOfSlideshow, setIndexOfSlideshow] = useState(80);
+    const [indexOfSlideshow, setIndexOfSlideshow] = useState(0);
     const [introductionData, setIntroductionData] = useState([]);
     const [error, setError] = useState(null);
 
@@ -43,6 +43,11 @@ export default function IntroductionFilterFromJson() {
         return fullStudentName.toLowerCase().includes(name.toLowerCase());
     })
 
+    const setIndexOfSlideshowT = (index) => {
+        console.log(index, filteredIntroductionData.length);
+        setIndexOfSlideshow(index);
+    }
+
     // Handler function to update the state when a checkbox is toggled
     const handleCheckboxChange = (event) => {
         const { name, checked } = event.target;
@@ -53,6 +58,7 @@ export default function IntroductionFilterFromJson() {
     };
     const updateIntros = (event) => {
         setName(event.target.value);
+        setNumIntros(filteredIntroductionData.length-1);
     };
     const updateSlideshow = () => {
         setSlideshow(prev => !prev);
@@ -96,16 +102,16 @@ export default function IntroductionFilterFromJson() {
 
                 ? 
                 <>
-                    <button onClick={() => indexOfSlideshow - 1 < 0 ? setIndexOfSlideshow(introductionData.length - 1) : setIndexOfSlideshow(indexOfSlideshow - 1)}>
+                    <button onClick={() => indexOfSlideshow - 1 < 0 ? setIndexOfSlideshow(filteredIntroductionData.length-1) : setIndexOfSlideshow(indexOfSlideshow - 1)}>
                         Previous
                     </button>
-                    <button onClick={() => indexOfSlideshow + 1 >= introductionData.length ? setIndexOfSlideshow(0) : setIndexOfSlideshow(indexOfSlideshow + 1)}>
+                    <button onClick={() => indexOfSlideshow + 1 >= filteredIntroductionData.length ? setIndexOfSlideshow(0) : setIndexOfSlideshowT(indexOfSlideshow + 1)}>
                         Next
                     </button>
                     <input
                         id={"slider"}
                         type="range"
-                        max={introductionData.length - 1}
+                        max={filteredIntroductionData.length - 1}
                         min={0}
                         step={1}
                         onChange={(event) =>
